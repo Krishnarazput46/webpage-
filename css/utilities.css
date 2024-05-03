@@ -1,0 +1,86 @@
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center; /*to bring home servive etc in between the logo*/
+}
+.justify-between {
+  justify-content: space-between; /*contact box ko left to right main shift kiya */
+}
+.btn {
+  padding: 0.8rem 3rem; /*increse the size of button of contect */
+  font-size: 1rem; /*increase the font size of button */
+  border: 2px solid transparent; /*makinmg border in to button */
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.9s ease;
+}
+.btn-primary {
+  background: var(--primary); /*button back ground colour*/
+}
+.right {
+  padding-right: 2rem;
+}
+.btn-primary:hover {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid transparent;
+  border-color: var(--primary);
+}
+.btn-secondary:hover {
+  background: var(--primary);
+  color: black;
+}
+.flex-1 {
+  flex: 2;
+}
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+.carousel__photo.prev {
+  transform: translateX(-100%); /* Move 'prev' item to the left */
+}
+.carousel__photo.next {
+  transform: translateX(100%); /* Move 'next' item to the right */
+}
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+.carousel__button--prev {
+  left: 0;
+}
+.carousel__button--next {
+  right: 0;
+}
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
